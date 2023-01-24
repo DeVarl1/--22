@@ -1,5 +1,18 @@
-n = int(input())
-arr = [[int(input()) for j in range(n)] for i in range(n)]
-print('\n'.join([''.join([str(f'{i:4}') for i in row]) for row in arr]))
-arr = list(zip(*arr))
-print('\n'.join([''.join([str(f'{i:4}') for i in row]) for row in arr]))
+def transpose(a):
+    for i in range(rows):
+        a[i] = [int(j) for j in input().strip().split(' ')]
+    rows_count = len(a)
+    colums_count = len(a[0])
+    new_matrix = [[0] * rows_count for _ in range(colums_count)]
+    for i in range(rows_count):
+        for j in range(colums_count):
+            new_matrix[j][i] = a[i][j]
+    for row in new_matrix:
+        print(*row)
+
+
+if __name__ == '__main__':
+    rows = int(input().strip())
+    colums = int(input().strip())
+    a = [colums for _ in range(rows)]
+    print(transpose(a))
