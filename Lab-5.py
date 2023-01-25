@@ -9,6 +9,7 @@ def get_repo_info():
     repo = g.get_repo(repo_name)
     repo_owner = repo.owner
     filepath = filedialog.asksaveasfilename(defaultextension=".txt",filetypes=[("Text files", "*.txt"),("All Files", "*.*")])
+   
     with open(filepath, "w") as f:
         f.write("Company: " + str(repo_owner.company) + "\n")
         f.write("Created at: " + str(repo_owner.created_at) + "\n")
