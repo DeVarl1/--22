@@ -1,3 +1,4 @@
+# -- coding: utf-8 --
 def transpose(a):
     for i in range(rows):
         a[i] = [int(j) for j in input().strip().split(' ')]

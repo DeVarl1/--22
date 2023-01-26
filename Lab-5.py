@@ -1,3 +1,4 @@
+# -- coding: utf-8 --
 import os
 from github import Github
 import tkinter as tk
